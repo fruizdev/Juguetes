@@ -4,7 +4,7 @@ $sol_insc = json_decode($_POST['crear_entidad'],true);
 
 $servername = "localhost";
 $username = "root";
-$password = "godzuki";
+$password = "Godzukison29";
 $dbname = "scej";
 
 $lat = "";
