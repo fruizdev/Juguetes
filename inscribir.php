@@ -13,7 +13,7 @@
           <h3 class="titulo">Formulario inscripción beneficiarios</h3>
         </div>
       </div>
-      
+        <label ng-model="codeStatus">{{codeStatus}}  </label> 
 
       <div class="row section-padding">
         <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
@@ -43,9 +43,18 @@
                   <option value="3">Especial E</option>
                 </select>
               </div>
+         <label for="rut">Ingresar Rut sin puntos, sin guión</label>
+                <div class="form-group">
+                <input required ng-model="benef.rut"
+                       type="text" 
+                       class="form-control" 
+                       placeholder="12345678-9" 
+                       id="rut" 
+                       onblur="checkRut(this)">
+              </div>
         
         
-              <label for="nombres">Nombres</label>
+              <label for="nombres">Nombre</label>
               <div class="row">
                 <div class="form-group col-sm-6">
                   <input required ng-model="benef.nombre1"  
@@ -56,13 +65,16 @@
                          id="nombre1" >
                 </div>
                 
-                  <div class="form-group col-sm-6">
+
+                  <div style="display:none" class="form-group col-sm-6">
                   <input ng-model="benef.nombre2"
                           
                          type="text" 
                          class="form-control soloLetras" 
-                         placeholder="Segundo Nombre"value="">
+                         placeholder="Segundo Nombre"
+                        >
                 </div>
+
               </div>
               
                 <label for="apellidos">Apellidos</label>
@@ -75,23 +87,14 @@
                          id="apellidos">
                 </div>
                 <div class="form-group col-sm-6">
-                  <input required ng-model="benef.apellido2" 
+                  <input  ng-model="benef.apellido2" 
                          type="text" 
-                         
                          class="form-control soloLetras" 
                          placeholder="Segundo Apellido">
                 </div>
               </div>
              
-                <label for="rut">Ingresar Rut</label>
-                <div class="form-group">
-                <input required ng-model="benef.rut"
-                       type="text" 
-                       class="form-control" 
-                       placeholder="12345678-9" 
-                       id="rut" 
-                       oninput="checkRut(this)">
-              </div>
+               
               
               <label for="fecha_nac">Fecha de Nacimiento</label>
                  <div class="form-group">
@@ -155,7 +158,7 @@
           </form>
         </div>
       </div>
-      <pre ng-model="codeStatus">{{codeStatus}}</pre>
+    
        
         
     </div>

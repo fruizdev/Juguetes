@@ -2,7 +2,7 @@
 $sol_log = json_decode($_POST['login_params'],true);
 $servername = "localhost";
 $username = "root";
-$password = "Godzukison29";
+$password = "godzuki";
 $dbname = "scej";
 
 $link = mysql_connect($servername, $username, $password)
@@ -25,7 +25,7 @@ if($result === FALSE) {
     if($row[0] ==1){
     $token = $sol_log['user'] . " | " . uniqid() . uniqid();  }
     
-    echo  json_encode(array("data" => $row[0] , "user" => $sol_log['user'], "token"=>$token));   
+  echo  json_encode(array("data" => $row[0] , "user" => $sol_log['user'], "token"=>$token));   
 }
    // $datos = array(array("Id"=>"0", "Nombre" =>"Todas las entidades"));    
 
@@ -35,7 +35,10 @@ $link2 = mysql_connect($servername, $username, $password);
 mysql_select_db($dbname) or die('No se pudo seleccionar la base de datos'); 
 mysql_set_charset("utf8"); 
    if($row[0] ==1){
-         $result2= mysql_query( "UPDATE USUARIO SET Token=" . "' $token'" . " WHERE NOMBRE =  " ."'" . $sol_log['user'] . "'" );
+       $q="UPDATE usuario SET Token=" . "' $token'"." , UltimoAcceso= NOW()  WHERE NOMBRE =  " ."'" . $sol_log['user'] . "'";
+      // echo   $q; 
+       $result2= mysql_query( $q );
+       
        if($result2 === FALSE) { 
       die(mysql_error()) ;  }
    }

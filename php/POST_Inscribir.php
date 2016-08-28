@@ -2,13 +2,18 @@
 $sol_insc = json_decode($_POST['inscripcion'],true);
 $servername = "localhost";
 $username = "root";
-$password = "Godzukison29";
+$password = "godzuki";
 $dbname = "scej";
 
 $usuario = $sol_insc['user'];
 $originalDate= $sol_insc['fecha_nac'];
 $newDate = date("Y-m-d", strtotime($originalDate));
-
+if ( ! isset($sol_insc['nombre2'])){
+    $sol_insc['nombre2']="";
+}
+if (! isset($sol_insc['apellido2'])){
+    $sol_insc['apellido2']="";
+}
 
 $link = mysql_connect($servername, $username, $password)
     or die('No se pudo conectar: ' . mysql_error());

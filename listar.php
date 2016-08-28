@@ -39,7 +39,7 @@
 <div style="padding-top:3%">     
     <table class="table table-striped table-hover table-bordered " id="tabla_listar"> 
          <br><br>     
-    <thead class="thead-inverse"> <tr> <th>#</th><th>Nombre</th> <th>Rut</th> <th>Edad</th> <th>Genero</th> <th>Dirección</th></tr> </thead>   
+    <thead class="thead-inverse"> <tr> <th>#</th><th>Nombre</th> <th>Rut</th> <th>Edad</th> <th>Genero</th> <th>Dirección</th><th>Tipo Insc.</th></tr> </thead>   
         <tbody>
         <tr ng-repeat='b in lista'>
               <td>{{ $index + 1}}  </td>
@@ -48,6 +48,7 @@
               <td>{{ b[2] }}  </td>
               <td>{{ b[3] }}  </td>
               <td>{{ b[4] }}  </td>
+             <td>{{ b[5] }}  </td>
         </tr>  
     </tbody>      
     </table>     

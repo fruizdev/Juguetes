@@ -5,7 +5,7 @@ include 'conexion.php' ;
 $periodo= 2016;//$_GET["periodo"];
 
 
-$q = "SELECT rut,entidad1,fecha1,user1,entidad2,fecha2,user2 FROM scej.reg_duplicado;"; 
+$q = "SELECT rut, nombre1, entidad1, fecha1, user1, entidad2, nombre2, fecha2, user2 FROM scej.reg_duplicado;"; 
        //ESTE ARRAY ALMACENARA LOS REGISTROS
 
 

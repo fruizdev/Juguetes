@@ -79,10 +79,10 @@ app.factory('Excel',function($window){
           cache: $templateCache
     }).
     success(function(response) {
-          $scope.codeStatus = response.data;  
-          alert($scope.codeStatus);
+          $scope.codeStatus = "Ultimo Inscrito: "+ $scope.benef.nombre1+" " +$scope.benef.apellido1;  
+          alert(response.data);
           $scope.benef = '';
-         $scope.benef = {user:localStorage.getItem('user') }  ; 
+          $scope.benef = {user:localStorage.getItem('user') }  ; 
     }).
     error(function(response) {
         $scope.codeStatus = response || "Request failed";

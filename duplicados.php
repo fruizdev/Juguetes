@@ -36,7 +36,7 @@
 <div style="padding-top:3%">     
     <table class="table table-striped table-hover table-bordered " id="tabla_dup"> 
          <br><br>     
-    <thead class="thead-inverse"> <tr> <th>#</th> <th>Rut</th> <th>Inscrito en</th> <th>Fecha</th> <th>Inscrito por</th><th>2do intento en</th><th>Fecha</th><th>Por</th></tr> </thead>   
+    <thead class="thead-inverse"> <tr> <th>#</th> <th>Rut</th> <th>Nombre</th><th>Inscrito en</th> <th>Fecha</th> <th>Inscrito por</th><th>2do intento en</th><th>Nombre2</th><th>Fecha</th><th>Por</th></tr> </thead>   
         <tbody>
         <tr ng-repeat='b in lista'>
               <td>{{ $index + 1}}  </td>
@@ -47,6 +47,8 @@
               <td>{{ b[4] }}  </td>
              <td>{{ b[5] }}  </td>
              <td>{{ b[6] }}  </td>
+             <td>{{ b[7] }}  </td>
+             <td>{{ b[8] }}  </td>
         </tr>  
     </tbody>      
     </table>     
