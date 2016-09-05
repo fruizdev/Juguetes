@@ -33,7 +33,8 @@
                        type="text" 
                        class="form-control" 
                        placeholder="12345678-9" 
-                       id="rut" oninput="checkRut(this)">
+                       id="rut" 
+                      oninput="checkRut(this)">
               </div>
            <label for="tipoEntidad">Tipo de Entidad</label>
               <div 

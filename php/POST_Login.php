@@ -2,7 +2,7 @@
 $sol_log = json_decode($_POST['login_params'],true);
 $servername = "localhost";
 $username = "root";
-$password = "Godzukison29";
+$password = "godzuki";
 $dbname = "scej";
 
 $link = mysql_connect($servername, $username, $password)

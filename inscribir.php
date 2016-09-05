@@ -50,7 +50,7 @@
                        class="form-control" 
                        placeholder="12345678-9" 
                        id="rut" 
-                       onblur="checkRut(this)">
+                      oninput="checkRut(this)">
               </div>
         
         

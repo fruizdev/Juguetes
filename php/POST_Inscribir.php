@@ -2,7 +2,7 @@
 $sol_insc = json_decode($_POST['inscripcion'],true);
 $servername = "localhost";
 $username = "root";
-$password = "Godzukison29";
+$password = "godzuki";
 $dbname = "scej";
 
 $usuario = $sol_insc['user'];

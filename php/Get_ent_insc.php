@@ -3,7 +3,7 @@
     include 'conexion.php' ;
 
       //  $q = "CALL Listar(1, 2016)"; 
-$q = "select Id,Nombre from entidad where cerrado=0;"; 
+$q = "select Id,Nombre from entidad where cerrado=0 order by id desc;"; 
        //ESTE ARRAY ALMACENARA LOS REGISTROS
        $datos = array();     
         //REALIZA CONSULTA
